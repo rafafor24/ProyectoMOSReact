@@ -1,0 +1,38 @@
+.App {
+  display: flex;
+}
+
+.column {
+  border:3px #ccc solid;
+  flex-grow: 1;
+  margin: 25px;
+  text-align: center;
+}
+
+.card {
+  border:3px whitesmoke solid;
+  padding: 25px;
+  display: flex;
+  background-color: black;
+  color: white;
+}
+
+
+.card span {
+  flex-grow: 1;
+  text-align: center;
+}
+
+textarea {
+  width: 500px;
+  height: 700px;
+}
+
+.container {
+  width: 1920px;
+  max-width: 100%;
+}
+
+label {
+  white-space: pre-wrap;
+}
