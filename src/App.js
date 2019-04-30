@@ -184,11 +184,11 @@ class App extends Component {
   handleClick = (columnIndex, cardIndex) => {
     console.log(
       "........" +
-        columnIndex +
-        "......." +
-        cardIndex +
-        "selection:" +
-        this.state.selection
+      columnIndex +
+      "......." +
+      cardIndex +
+      "selection:" +
+      this.state.selection
     );
     this.setState(prevState => {
       const { columns } = prevState;
@@ -228,11 +228,9 @@ class App extends Component {
       }
       console.log(res);
 
-      var s1 = "p::(";
-      var s2 = "1..32)[";
       var product = [];
       var paso = 1 / 32;
-      var res2 = "";
+      var res2 = "Parameter p(i, j) hora i dia j productividad entera;\np(i, j) = 0;\n";
       for (i = 0; i < 32; i++) {
         product.push(paso * i);
       }
@@ -240,12 +238,11 @@ class App extends Component {
         product.reverse();
       }
       for (i = 1; i < 6; i++) {
-        res2 += "!Dia " + dias[i - 1] + "\n";
-        res2 += s1 + i + "," + s2;
-        for (j = 1; j < 32; j++) {
-          res2 += product[j - 1] + ",";
+        res2 += "***Dia " + dias[i - 1] + "\n";
+        for (j = 1; j < 33; j++) {
+          res2 += 'p("h' + j + '", "d' + i + '")=' + product[j - 1] + ";\n";
         }
-        res2 += product[31] + "]\n";
+
       }
       console.log(res2);
 

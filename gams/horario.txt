@@ -1,0 +1,4 @@
+k	materias / m1*m5 /
+Parameter h(i,j,k) hora i dia j materia k binario;
+h(i,j,k)=0;
+h("h1","d1","m1")=999;
